@@ -63,25 +63,30 @@ data datax;
 void exec(void);
 int main(int argc, char **argv);
 
-/*opcodes.c*/
+/*get_oper.c*/
 void _push(stack_t **top, unsigned int line_number);
 void _pall(stack_t **top, unsigned int line_number);
+/*print_oper.c*/
 void _pint(stack_t **top, unsigned int line_number);
 void _pop(stack_t **top, unsigned int line_number);
 void _swap(stack_t **top, unsigned int line_number);
 void _add(stack_t **top, unsigned int line_number);
 void _nop(stack_t **top, unsigned int line_number);
+/*div_oper.c*/
 void _sub(stack_t **top, unsigned int line_number);
 void _div(stack_t **top, unsigned int line_number);
 void _mul(stack_t **top, unsigned int line_number);
 void _mod(stack_t **top, unsigned int line_number);
+/*stack_oper.c*/
 void _pchar(stack_t **top, unsigned int line_number);
 void _pstr(stack_t **top, unsigned int line_number);
+/*rotr_oper.c*/
 void _rotl(stack_t **top, unsigned int line_number);
 void _rotr(stack_t **top, unsigned int line_number);
+/*mode_oper.c*/
 void _mode(stack_t **top, unsigned int line_number);
 
-/*helpers.c*/
+/*help.c*/
 FILE *openfile(char *filename);
 size_t num_len(int num);
 void verify_number(char *token);
