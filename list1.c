@@ -8,14 +8,14 @@
  */
 size_t dlistint_len(const dlistint_t *h)
 {
-	size_t nd = 0;
+	size_t nodes = 0;
 
 	if (!h)
 		return (0);
 
 	while (h)
 	{
-		nd++;
+		nodes++;
 		h = h->next;
 	}
 
@@ -61,7 +61,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
  */
 size_t print_dlistint(const dlistint_t *h)
 {
-	size_t nd = 0;
+	size_t nodes = 0;
 
 	if (!h)
 		return (0);
@@ -70,10 +70,10 @@ size_t print_dlistint(const dlistint_t *h)
 	{
 		printf("%d\n", h->n);
 		h = h->next;
-		nd++;
+		nodes++;
 	}
 
-	return (nd);
+	return (nodes);
 }
 
 /**
