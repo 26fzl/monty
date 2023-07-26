@@ -50,7 +50,7 @@ void (*get_func(char **parsed))(stack_t **, unsigned int)
 void push_handler(stack_t **stack, unsigned int line_number)
 {
 	stack_t *new;
-	int numb = 0, x;
+	int num = 0, x;
 
 	if (data.words[1] == NULL)
 	{
@@ -68,7 +68,7 @@ void push_handler(stack_t **stack, unsigned int line_number)
 			exit(EXIT_FAILURE);
 		}
 	}
-	numb = atoi(data.words[1]);
+	num = atoi(data.words[1]);
 
 	if (data.qflag == 0)
 		new = add_dnodeint(stack, num);
